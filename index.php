@@ -63,7 +63,7 @@ require_once('functions.php');
   }
 
   div#add_btn{
-    margin-top:2em;
+    margin-top:1em;
   }
 
   div.addform{
@@ -92,8 +92,10 @@ require_once('functions.php');
     <div class="container main">
       <div class='row'>
         <div class="col-xs-11" id='title'>
+          <a href='http://www.markdanovich.com/folder' style='text-decoration:none; color:#111;'>
           <h1>Folder</h1>
           <p class="lead">Links for later read and reference</p>
+          </a>
         </div>
       <div class='col-xs-1' id='add_btn'>
         <button type="button" class='btn btn-info btn-lg' name="submit" id="add">+</button>
@@ -102,25 +104,25 @@ require_once('functions.php');
       <div class='addform'>
         <form action='add.php' method='POST' id='add_form'>
             <div class='row'>
-              <div class='col-xs-4'>
+              <div class='col-sm-4'>
                 <label for="url">URL</label>
                 <input type="text" class="form-control" name="urlinput" placeholder="Enter URL" >
               </div>
-              <div class='col-xs-3'>
+              <div class='col-sm-3'>
                 <label for="tags">Tags</label>
                 <input type="text" class="form-control" name="tagsinput" placeholder="Enter comma separated tags">
               </div>
-                <div class='col-xs-3'>
+                <div class='col-sm-3'>
                   <label for="desc">Description</label>
                   <textarea class="form-control" name="descinput" rows="3" placeholder="Write a short descritption"></textarea>
                 </div>
-                <div class='col-xs-2'>
+                <div class='col-sm-2'>
                   <label for="password">Password</label>
                   <input type="password" class="form-control" name="passinput" placeholder="Password">
                 </div>
                 </div>
                   <div class='row'>
-                    <div class='col-xs-2'>
+                    <div class='col-sm-2'>
                       <button class='btn btn-success btn-sm' id='submit' type='submit'>Add</button>
                     </div>
                   </div>
