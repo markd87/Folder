@@ -78,17 +78,24 @@ require_once('functions.php');
   div.centered{
     text-align: center;
   }
+
+  div#title{
+    background-image: url("folder.png");
+    background-repeat: no-repeat;
+    background-size: 43px;
+    background-position: 135px 20px;
+  }
   </style>  
 
   </head>
   <body>
     <div class="container main">
       <div class='row'>
-        <div class="col-sm-11">
+        <div class="col-xs-11" id='title'>
           <h1>Folder</h1>
           <p class="lead">Links for later read and reference</p>
         </div>
-      <div class='col-sm-1' id='add_btn'>
+      <div class='col-xs-1' id='add_btn'>
         <button type="button" class='btn btn-info btn-lg' name="submit" id="add">+</button>
       </div>
     </div>
@@ -122,6 +129,9 @@ require_once('functions.php');
           <div class='row col-sm-12 centered'>
               <div id='status'></div>
           </div>
+            <div class='row col-xs-14' style='text-align:right; margin:0px; padding:0px;'>
+                <a href='http://www.markdanovich.com'>Mark Danovich</a>, on <a href='https://github.com/markd87/Folder'>GitHub</a>
+            </div>
       </div>
     </div>
 
