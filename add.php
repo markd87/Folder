@@ -4,9 +4,10 @@
 require_once('configi.php');
 require_once('functions.php');
 
-$url=mysql_real_escape_string($_POST['url']);
-$description=mysql_real_escape_string($_POST['description']);
-$tags=mysql_real_escape_string($_POST['tag']);
+$url=$_POST['url'];
+//$url=mysql_real_escape_string($url);
+$description=$mysqli->real_escape_string($_POST['description']);
+$tags=$mysqli->real_escape_string($_POST['tag']);
 $pass=$_POST['password'];
 
 $arr=array();
