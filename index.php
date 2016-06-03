@@ -64,6 +64,7 @@ require_once('functions.php');
 
   div#add_btn{
     margin-top:1em;
+    padding:0px;
   }
 
   div.addform{
@@ -131,7 +132,7 @@ require_once('functions.php');
           <div class='row col-sm-12 centered'>
               <div id='status'></div>
           </div>
-            <div class='row col-xs-14' style='text-align:right; margin:0px; padding:0px;'>
+            <div class='col-xs-12' style='text-align:right; margin:0px; padding:0px;'>
                 <a href='http://www.markdanovich.com'>Mark Danovich</a>, on <a href='https://github.com/markd87/Folder'>GitHub</a>
             </div>
       </div>

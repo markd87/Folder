@@ -10,7 +10,8 @@
 
 	function get_tags(){
     	global $mysqli;
-		$query="SELECT DISTINCT(tag) AS tag FROM tags";
+    	$query="SELECT tag,COUNT(*) as count FROM tags GROUP BY tag";
+		//$query="SELECT DISTINCT(tag) AS tag FROM tags";
 		return $mysqli->query($query);
 	}
 
@@ -57,11 +58,17 @@
 	}
 
   function display_tags(){
-    
+      global $mysqli;
       $results=get_tags();
+      $query='SELECT MAX(count) AS max FROM (SELECT tag,COUNT(*) as count FROM tags GROUP BY tag) tags';
+      $res=$mysqli->query($query);
+      $max=mysqli_fetch_array($res);
+      $max=$max['max'];
       $out="";
       while ($tag=mysqli_fetch_array($results)) {
-        $out.="<a href='#' class='tag lead small' id='{$tag['tag']}'>{$tag['tag']}</a>". " ";
+      	$fontsize=20*($tag['count']/$max);
+      	$fontsize=strval($fontsize)."px";
+        $out.="<a href='#' class='tag lead small' style='font-size:{$fontsize};' id='{$tag['tag']}'>{$tag['tag']}</a>". " ";
       }
       return $out;
   }
