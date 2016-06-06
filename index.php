@@ -86,6 +86,18 @@ require_once('functions.php');
     background-size: 43px;
     background-position: 135px 20px;
   }
+
+  span.close_tag{
+    background-color:#ddd; 
+    border-radius:5px; 
+    padding:5px; 
+    cursor:pointer;
+  }
+
+  span.close_tag:hover{
+    background-color: #aaa;
+  }
+
   </style>  
 
   </head>

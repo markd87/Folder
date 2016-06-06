@@ -24,9 +24,7 @@
                 $query="SELECT t.tag FROM tags t WHERE url_id={$id};";
                 $tagnames=$mysqli->query($query);
                 $tagout=" ";
-                $out.= "<li> <a href='{$url['url']}' target='_blank'>{$url['url']}</a>";
-                $out.="<br/><span class='lead small'>{$url['description']}</span><br/>";
-                #echo $explode(',',$tags);
+                $out.= "<li> <a href='{$url['url']}' target='_blank'>{$url['description']}</a><br/>";
                 while ($tag=mysqli_fetch_array($tagnames)){
                   $tagout.="<a href='#' class='tag lead small' id='{$tag['tag']}'>{$tag['tag']}</a> ";
         		};
@@ -45,9 +43,7 @@
                 $query="SELECT t.tag FROM tags t WHERE url_id={$id};";
                 $tagnames=$mysqli->query($query);;
                 $tagout=" ";
-                $out.= "<li> <a href='{$url['url']}' target='_blank'>{$url['url']}</a>";
-                $out.="<br/><span class='lead small'>{$url['description']}</span><br/>";
-                #echo $explode(',',$tags);
+                $out.= "<li> <a href='{$url['url']}' target='_blank'>{$url['description']}</a><br/>";
                 while ($tag=mysqli_fetch_array($tagnames)){
                   $tagout.="<a href='#' class='tag lead small' id='{$tag['tag']}'>{$tag['tag']}</a> ";
         		};

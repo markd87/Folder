@@ -53,7 +53,7 @@ $(document).ready(function(){
             data        : Data, // our data object
         	success: function(data) {
                 $("span.close_tag").remove();
-                var tags="<div id='tags_list'><span class='lead small close_tag' style='position:relative; top:-20px; background-color:#ddd; border-radius:5px; padding:5px; cursor:pointer;'>x "+ tagname + "</span></div>";
+                var tags="<div id='tags_list'><span class='lead small close_tag' style='position:relative; top:-20px;'>x "+ tagname + "</span></div>";
                 $("div#links").prepend(tags);
         		$("ul#url_list").html(data);
         		/*$("div.addform").toggle('normal');
