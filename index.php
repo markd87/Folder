@@ -13,7 +13,7 @@ require_once('functions.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title></title>
+    <title>Folder - links for later read and reference</title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
