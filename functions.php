@@ -62,9 +62,12 @@
       $max=$max['max'];
       $out="";
       while ($tag=mysqli_fetch_array($results)) {
-      	$fontsize=20*($tag['count']/$max);
+      	$fontsize=21*($tag['count']/$max);
+        if ($fontsize<10){
+          $fontsize=10;
+        }
       	$fontsize=strval($fontsize)."px";
-        $out.="<a href='#' class='tag lead small' style='font-size:{$fontsize};' id='{$tag['tag']}'>{$tag['tag']}</a>". " ";
+        $out.="<a href='#' class='tag lead' style='font-size:{$fontsize};' id='{$tag['tag']}'>{$tag['tag']}</a>". " ";
       }
       return $out;
   }
