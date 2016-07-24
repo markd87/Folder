@@ -10,8 +10,13 @@ $description=$mysqli->real_escape_string($_POST['description']);
 $tags=$mysqli->real_escape_string($_POST['tag']);
 $pass=$_POST['password'];
 
+$query="SELECT pass FROM users WHERE user='markd'";
+$res=$mysqli->query($query);
+$res_arr=mysqli_fetch_array($res);
+$real_pass=$res_arr['pass'];
+
 $arr=array();
-if (md5($pass)=='e6b0b3e7caac6c46df2b09f6214aa312'){
+if (hash('sha256',$pass)==$real_pass){
 	$query="INSERT INTO urls(url, description) VALUES('{$url}','{$description}')";
 	$mysqli->query($query);
 	$lastid=$mysqli->insert_id;
