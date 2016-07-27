@@ -22,6 +22,7 @@ if (hash('sha256',$pass)==$real_pass){
 	$lastid=$mysqli->insert_id;
 	$tags_arr=explode(",",trim($tags));
 	foreach ($tags_arr as $tag){
+		$tag=trim($tag);
 		$query="INSERT INTO tags(tag, url_id) VALUES('{$tag}','{$lastid}')";
 		$mysqli->query($query);
 	};	
