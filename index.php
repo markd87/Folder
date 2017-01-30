@@ -43,6 +43,7 @@ require_once('functions.php');
 
   a.tag:hover{
     text-decoration: none;
+    color:brown;
   }
 
   p.small{
