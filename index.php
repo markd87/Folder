@@ -106,7 +106,7 @@ require_once('functions.php');
     <div class="container main">
       <div class='row'>
         <div class="col-xs-11" id='title'>
-          <a href='http://www.markdanovich.com/folder' style='text-decoration:none; color:#111;'>
+          <a href='https://markd87.github.io' style='text-decoration:none; color:#111;'>
           <h1>Folder</h1>
           <p class="lead">Links for later read and reference</p>
           </a>
